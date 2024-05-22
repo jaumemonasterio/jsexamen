@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label:not(.inline),
+        input:not(.inline),
+        textarea {
+            display: block;
+        }
+        .error{
+            color: red;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <h1> Nou Grup</h1>
+
+    <form action="" id="nougrup">
+
+
+        <table>
+            <tr>
+                <td> <label for="nom"> Nom del grup </label> </td>
+                <td> <input type="text" name="nom" id="nom"><br>
+                    <p class="error" id="enom"></p>
+            </tr>
+            </td>
+            </tr>
+            <tr>
+                <td> <label for="imatge"> imatge </label> </td>
+                <td> <input type="text" id="imatge"><br>
+                    <p class="error" id="errori">
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td> <label for="descripcio"> descripcio</label> </td>
+                <td> <textarea name="descripcio" id="descripcio" cols="30" rows="10"></textarea><br>
+                    <p class="error" id="edescripcio"></p>
+                </td>
+            </tr>
+            <tr>
+                <td> <label for="email"> Equiteques</label> </td>
+                <td>
+
+                    <label id="esports"> <input id="esports" type="checkbox" name="lab" class="inline"> esports </label>
+                    <label id="social"><input id="social" type="checkbox" name="lab" class="inline"> Social </label>
+                    <label id="records"><input id="records" type="checkbox" name="lab" class="inline"> records</label>
+                    <label id="salut"><input id="salut" type="checkbox" name="lab" class="inline"> salut </label>
+                    <label id="cinema"><input id="cinema" type="checkbox" name="lab" class="inline"> cinema</label>
+                    <label id ="entreteniment"><input id="entreteniment" type="checkbox" name="lab" class="inline"> entreteniment</label>
+                    <label id="Musica"><input id="Musica" type="checkbox" name="lab" class="inline"> Musica </label><br>
+
+                    <p id="cheke" class="error"></p>
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"> <input type="submit" value="enviar"></td>
+
+
+            </tr>
+
+        </table>
+    </form>
+
+
+
+    <h1> cercador de grups: </h1>
+
+    <h3>nom del grup a buscar <input type="text" name="busgu" id="busgu"> <button type="button" onclick="buscar()"> buscar</button></h3>
+
+
+    <h1> grups</h1>
+
+    <button type="button" onclick="usg()"> veure grups del usuari</button>
+    <button type="button" onclick="vtg()"> veure tots els grups </button>
+
+    <table id="grups" >
+
+       
+<thead>
+                <th> nom</th>
+                <th>descripcio</th>
+                <th> imatge</th>
+                <th> tags</th>
+            </thead>
+        <tbody id="cos">
+    
+
+        </tbody>
+
+    </table>
+</body>
+<script src="afegit.js"></script>
+<script src="grups.js"></script>
+<script src="escriuretaula.js"></script>
+<script src="validacio.js"></script>
+<script src="buscargrup.js"></script>
+
+
+</html>
